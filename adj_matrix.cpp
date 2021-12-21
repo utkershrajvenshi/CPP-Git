@@ -4,17 +4,16 @@
 #include <vector>
 using namespace std;
 
-#define all(x) x.begin(),x.end()
 #define f(i,a,b) for(int i=a;i<b;++i)
+#define v vector
 
-typedef vector v;
-typedef v<int> vi;
+typedef vector<int> vi;
 
 enum class city: int
 {
 	LONDON,
 	MOSCOW,
-	INSTANBUL,
+	ISTANBUL,
 	DUBAI,
 	MUMBAI,
 	SEATTLE,
@@ -48,7 +47,7 @@ struct graph{
 	graph(int n){
 		data.reserve(n);
 		vi row(n);
-		fill(all(row), -1);
+		fill(row.begin(), row.end(), -1);
 		f(i,0,n){
 			data.push_back(row);
 		}
